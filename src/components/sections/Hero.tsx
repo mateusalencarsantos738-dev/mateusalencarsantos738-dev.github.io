@@ -3,6 +3,7 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ArrowUpRight } from "lucide-react"
 import { MagneticButton } from "../ui/MagneticButton"
+import { WHATSAPP_URL } from "../../lib/utils"
 
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -81,7 +82,7 @@ export function Hero() {
 
           {/* Primary CTAs */}
           <div className="hero-cta flex items-center gap-4">
-            <MagneticButton href="#contact" className="bg-foreground text-background px-4">
+            <MagneticButton href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="bg-foreground text-background px-4">
               {/* Espaçador invisível para balancear a seta e centralizar o texto perfeitamente */}
               <div className="mr-2 w-8 shrink-0" aria-hidden="true" />
               

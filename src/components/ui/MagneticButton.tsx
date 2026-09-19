@@ -7,9 +7,11 @@ interface MagneticButtonProps {
   className?: string
   onClick?: () => void
   href?: string
+  target?: string
+  rel?: string
 }
 
-export function MagneticButton({ children, className, onClick, href }: MagneticButtonProps) {
+export function MagneticButton({ children, className, onClick, href, target, rel }: MagneticButtonProps) {
   // Use separate typed refs for button and anchor to avoid @ts-ignore
   const buttonRef = useRef<HTMLButtonElement>(null)
   const anchorRef = useRef<HTMLAnchorElement>(null)
@@ -55,7 +57,7 @@ export function MagneticButton({ children, className, onClick, href }: MagneticB
 
   if (href) {
     return (
-      <a ref={anchorRef} href={href} {...sharedProps}>
+      <a ref={anchorRef} href={href} target={target} rel={rel} {...sharedProps}>
         {children}
       </a>
     )

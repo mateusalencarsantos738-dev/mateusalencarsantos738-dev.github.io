@@ -5,10 +5,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 // ─────────────────────────────────────────────────────────────────────────────
 // MOOD SYSTEM — opacity values for each cloud layer per section
 // ─────────────────────────────────────────────────────────────────────────────
-type MoodName = "hero" | "clean"
+type MoodName = "hero" | "clean" | "contact"
 
 const MOODS: Record<MoodName, { far: number; mid: number; near: number }> = {
   hero:     { far: 0.28, mid: 0.40, near: 0.48 },
+  contact:  { far: 0.15, mid: 0.20, near: 0.25 },
   clean:    { far: 0.00, mid: 0.00, near: 0.00 },
 }
 
@@ -51,9 +52,9 @@ export function AtmosphericBackground() {
           end: "bottom bottom",
           scrub: 1.5,
           animation: gsap.timeline()
-            .to(farRef.current,  { yPercent: 12 }, 0)
-            .to(midRef.current,  { yPercent: 30 }, 0)
-            .to(nearRef.current, { yPercent: 55 }, 0),
+            .to(farRef.current,  { backgroundPosition: "50% 25%" }, 0)
+            .to(midRef.current,  { backgroundPosition: "50% 25%" }, 0)
+            .to(nearRef.current, { backgroundPosition: "50% 40%" }, 0),
         })
       }
 
@@ -79,7 +80,7 @@ export function AtmosphericBackground() {
         ScrollTrigger.create({
           trigger: contactEl,
           start: "top 70%",
-          onEnter:     () => transition("hero"),
+          onEnter:     () => transition("contact"),
           onLeaveBack: () => transition("clean"),
         })
       }
@@ -100,9 +101,10 @@ export function AtmosphericBackground() {
       {/* FAR LAYER */}
       <div 
         ref={farRef}
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat will-change-transform"
+        className="absolute inset-0 bg-cover bg-no-repeat will-change-transform"
         style={{ 
           backgroundImage: "url('/assets/images/clouds-far.jpg')", 
+          backgroundPosition: "50% 50%",
           opacity: MOODS.hero.far, 
           backgroundSize: "110% 110%", // Prevent edge gaps during drift/parallax
           mixBlendMode: "screen",
@@ -113,9 +115,10 @@ export function AtmosphericBackground() {
       {/* MID LAYER */}
       <div 
         ref={midRef}
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat will-change-transform"
+        className="absolute inset-0 bg-cover bg-no-repeat will-change-transform"
         style={{ 
           backgroundImage: "url('/assets/images/clouds-far.jpg')", 
+          backgroundPosition: "50% 50%",
           opacity: MOODS.hero.mid,
           backgroundSize: "120% 120%",
           mixBlendMode: "screen",
@@ -126,9 +129,10 @@ export function AtmosphericBackground() {
       {/* NEAR LAYER */}
       <div 
         ref={nearRef}
-        className="absolute inset-0 bg-cover bg-bottom bg-no-repeat will-change-transform"
+        className="absolute inset-0 bg-cover bg-no-repeat will-change-transform"
         style={{ 
           backgroundImage: "url('/assets/images/clouds-near.jpg')", 
+          backgroundPosition: "50% 100%",
           opacity: MOODS.hero.near,
           backgroundSize: "130% 130%",
           mixBlendMode: "screen",
