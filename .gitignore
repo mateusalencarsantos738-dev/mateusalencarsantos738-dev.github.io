@@ -23,5 +23,10 @@ dist-ssr
 *.sln
 *.sw?
 
-# Public assets (photos, etc)
-public/
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Reference materials (heavy files)
+references/video/

@@ -5,8 +5,8 @@ export function Footer() {
         &copy; {new Date().getFullYear()} Mateus Alencar. Todos os direitos reservados.
       </div>
       <div className="flex items-center gap-6">
-        <a href="https://github.com/teusmateus" target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors duration-300">GitHub</a>
-        <a href="https://linkedin.com/in/mateusalencar" target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors duration-300">LinkedIn</a>
+        <a href="https://github.com/mateusalencarsantos738-dev" target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors duration-300">GitHub</a>
+        <a href="https://www.linkedin.com/in/mateus-alencar-santos/" target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors duration-300">LinkedIn</a>
       </div>
     </footer>
   )

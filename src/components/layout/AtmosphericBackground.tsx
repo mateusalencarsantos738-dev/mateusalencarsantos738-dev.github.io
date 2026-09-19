@@ -102,7 +102,7 @@ export function AtmosphericBackground() {
         ref={farRef}
         className="absolute inset-0 bg-cover bg-center bg-no-repeat will-change-transform"
         style={{ 
-          backgroundImage: "url('/clouds_far.jpg')", 
+          backgroundImage: "url('/assets/images/clouds-far.jpg')", 
           opacity: MOODS.hero.far, 
           backgroundSize: "110% 110%", // Prevent edge gaps during drift/parallax
           mixBlendMode: "screen",
@@ -115,7 +115,7 @@ export function AtmosphericBackground() {
         ref={midRef}
         className="absolute inset-0 bg-cover bg-center bg-no-repeat will-change-transform"
         style={{ 
-          backgroundImage: "url('/clouds_far.jpg')", 
+          backgroundImage: "url('/assets/images/clouds-far.jpg')", 
           opacity: MOODS.hero.mid,
           backgroundSize: "120% 120%",
           mixBlendMode: "screen",
@@ -128,7 +128,7 @@ export function AtmosphericBackground() {
         ref={nearRef}
         className="absolute inset-0 bg-cover bg-bottom bg-no-repeat will-change-transform"
         style={{ 
-          backgroundImage: "url('/clouds_near.jpg')", 
+          backgroundImage: "url('/assets/images/clouds-near.jpg')", 
           opacity: MOODS.hero.near,
           backgroundSize: "130% 130%",
           mixBlendMode: "screen",
