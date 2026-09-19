@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #050505;
+  --color-foreground: #FDFBF7;
+  --color-muted: #111111;
+  --color-muted-foreground: #A1A1AA;
+  --color-border: rgba(255, 255, 255, 0.1);
+  
+  --font-display: "Syne", sans-serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+
+  --ease-custom: cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-in-out-custom: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+@layer base {
+  :root {
+    --background: var(--color-background);
+    --foreground: var(--color-foreground);
+  }
+
+  /* Lenis smooth scrolling defaults */
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+  
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Double-Bezel Inner Highlight */
+  .shadow-inner-bezel {
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.15);
+  }
+
+  /* Split text classes */
+  .split-line {
+    overflow: hidden;
+  }
+  
+  .split-word {
+    display: inline-block;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   THEME ENGINE — Light/Dark section-level override
+   These classes are placed on each <section> wrapper.
+   Since Tailwind v4 @theme doesn't accept var() values, we use plain CSS
+   to override the Tailwind color tokens at the component boundary.
+──────────────────────────────────────────────────────────────────────────── */
+
+/* Light (Editorial Luxury — warm cream) */
+.section-light {
+  --color-background: #FDFBF7;
+  --color-foreground: #111111;
+  --color-muted: #EBE9E4;
+  --color-muted-foreground: #6B6A66;
+  --color-border: rgba(0, 0, 0, 0.09);
+
+  background-color: #FDFBF7;
+  color: #111111;
+}
+
+/* Dark (OLED / Cinematic) */
+.section-dark {
+  --color-background: #050505;
+  --color-foreground: #FDFBF7;
+  --color-muted: #111111;
+  --color-muted-foreground: #A1A1AA;
+  --color-border: rgba(255, 255, 255, 0.10);
+
+  background-color: #050505;
+  color: #FDFBF7;
+}
+
+/* Transparent — reveals AtmosphericBackground through */
+.section-atmospheric {
+  background-color: transparent;
+  color: #FDFBF7;
+}
+
+/* ─── Tailwind token overrides triggered by parent theme ──────────────────── */
+
+/* bg-background inside a section-light resolves to cream */
+.section-light .bg-background  { background-color: #FDFBF7; }
+.section-light .text-foreground { color: #111111; }
+.section-light .text-muted-foreground { color: #6B6A66; }
+.section-light .border-border   { border-color: rgba(0, 0, 0, 0.09); }
+
+/* Card surfaces inside section-light */
+.section-light .card-shell {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.09);
+  box-shadow: none;
+}
+.section-light .card-core {
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 20px -4px rgba(0, 0, 0, 0.06);
+}
+
+/* Card surfaces inside section-dark (default) */
+.section-dark .card-shell,
+.card-shell {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.10);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.10);
+}
+.section-dark .card-core,
+.card-core {
+  background-color: #090909;
+}
+
+/* Hover rows inside section-light */
+.section-light .hover-row:hover { background-color: rgba(0, 0, 0, 0.04); }
+.section-dark  .hover-row:hover { background-color: rgba(255, 255, 255, 0.04); }
