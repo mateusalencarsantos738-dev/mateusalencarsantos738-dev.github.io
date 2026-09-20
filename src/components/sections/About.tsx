@@ -30,7 +30,7 @@ export function About() {
     <section id="about" ref={sectionRef} className="section-light py-24 md:py-40 w-full relative z-10">
       <div className="px-4 md:px-8 max-w-7xl mx-auto w-full">
         <div className="flex flex-col md:flex-row gap-8 lg:gap-16 items-start">
-          <h2 className="text-4xl md:text-6xl font-display font-bold md:w-1/3 leading-none sticky top-32">
+          <h2 className="text-4xl md:text-6xl font-display font-bold md:w-1/3 leading-none md:sticky md:top-32">
             SOBRE MIM.
           </h2>
           
