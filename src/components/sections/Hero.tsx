@@ -67,7 +67,7 @@ export function Hero() {
       <div className="flex flex-col md:flex-row justify-between items-end gap-10 md:gap-16">
         
         {/* Left: Massive Typography — anchors the left half */}
-        <h1 className="shrink-0 text-6xl md:text-8xl lg:text-[10rem] font-display font-bold leading-[0.85] tracking-tight uppercase">
+        <h1 className="shrink-0 text-6xl md:text-8xl lg:text-[10rem] font-display font-bold leading-[0.85] tracking-tight uppercase w-full text-center md:w-auto md:text-left">
           <div className="overflow-hidden"><span className="hero-word inline-block origin-bottom-left">Mateus</span></div>
           <div className="overflow-hidden"><span className="hero-word inline-block origin-bottom-left text-muted-foreground">Alencar</span></div>
         </h1>
