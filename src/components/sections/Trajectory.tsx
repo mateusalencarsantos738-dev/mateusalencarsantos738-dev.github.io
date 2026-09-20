@@ -12,13 +12,13 @@ const experiences = [
     role: "Especialização em Backend",
     institution: "Estudos Práticos",
     date: "Atual",
-    description: "Desenvolvimento ativo de APIs escaláveis utilizando Java, Python e frameworks robustos como Django e Spring."
+    description: "Estudo e prática de desenvolvimento backend com Java, Python e frameworks como Django, com foco em lógica, APIs e desenvolvimento de aplicações."
   },
   {
-    role: "Fundamentos de Cloud e DevOps",
+    role: "Estudos em Cloud e DevOps",
     institution: "Prática Contínua",
-    date: "2024",
-    description: "Implementação de infraestrutura em nuvem na AWS, automação com GitHub Actions e orquestração de containers."
+    date: "2026",
+    description: "Estudos de fundamentos de cloud, Linux, AWS, deploy, CI/CD e práticas de DevOps."
   }
 ]
 

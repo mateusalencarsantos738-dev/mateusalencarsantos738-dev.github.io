@@ -40,7 +40,7 @@ export function About() {
               <div className="card-core rounded-[calc(2rem-0.375rem)] p-8 h-full flex flex-col justify-center">
                 <h3 className="text-xl font-bold font-display mb-4">Desenvolvedor e Analista de Sistemas em formação</h3>
                 <p style={{ color: 'var(--color-muted-foreground)' }} className="text-balance">
-                  Meu foco principal reside no ecossistema de backend, construindo APIs robustas, modelando bancos de dados relacionais e entendendo a fundo a infraestrutura em nuvem para escalar aplicações modernas.
+                  Estudante de Análise e Desenvolvimento de Sistemas com foco em backend e desenvolvimento de aplicações web. Desenvolvo projetos de software voltados a problemas reais, trabalhando com APIs, bancos de dados e diferentes tecnologias para transformar necessidades concretas em soluções funcionais.
                 </p>
               </div>
             </div>
@@ -61,7 +61,7 @@ export function About() {
               <div className="rounded-[calc(2rem-0.375rem)] p-8 h-full flex flex-col justify-between" style={{ backgroundColor: '#111111', color: '#FDFBF7' }}>
                 <h4 className="text-sm uppercase tracking-widest font-bold mb-4 opacity-70">Trajetória</h4>
                 <p className="text-xl font-display leading-tight">
-                  Em constante evolução acadêmica e prática para me tornar um engenheiro de software capaz de resolver problemas reais.
+                  Em constante evolução acadêmica e prática, aprofundando conhecimentos e transformando desafios reais em soluções de software cada vez mais sólidas.
                 </p>
               </div>
             </div>
