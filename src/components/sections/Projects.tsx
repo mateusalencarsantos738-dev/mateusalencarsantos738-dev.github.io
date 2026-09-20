@@ -33,9 +33,8 @@ export function Projects() {
       {/* Large, low-opacity word creates presence without competing with content */}
       <div
         aria-hidden="true"
-        className="ghost-word select-none pointer-events-none absolute -top-4 -left-6 md:-left-8 font-display font-bold leading-none z-0"
+        className="ghost-word select-none pointer-events-none absolute -top-4 -left-6 md:-left-8 font-display font-bold leading-none z-0 text-[clamp(4.5rem,18vw,6rem)] md:text-[clamp(8rem,22vw,20rem)]"
         style={{
-          fontSize: 'clamp(8rem, 22vw, 20rem)',
           color: '#FDFBF7',
           opacity: 0.04,
           letterSpacing: '-0.02em',
