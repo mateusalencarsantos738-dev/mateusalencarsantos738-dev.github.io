@@ -53,8 +53,9 @@ export function Trajectory() {
       {/* On light background, near-black at ~4% creates the same depth effect */}
       <div
         aria-hidden="true"
-        className="select-none pointer-events-none absolute top-8 -right-4 md:right-140 font-display font-bold leading-none z-0 text-[clamp(3.5rem,14vw,6rem)] md:text-[clamp(4rem,10vw,9rem)]"
+        className="ghost-traj-mobile-fix select-none pointer-events-none absolute top-8 md:-translate-y-[17px] right-140 font-display font-bold leading-none z-0"
         style={{
+          fontSize: 'clamp(4rem, 10vw, 9rem)',
           color: '#050505',
           opacity: 0.045,
           letterSpacing: '-0.03em',

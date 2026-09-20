@@ -147,3 +147,16 @@
 /* Hover rows inside section-light */
 .section-light .hover-row:hover { background-color: rgba(0, 0, 0, 0.04); }
 .section-dark  .hover-row:hover { background-color: rgba(255, 255, 255, 0.04); }
+
+/* Mobile Typography Overrides for Editorial Background Texts */
+@media (max-width: 767px) {
+  .ghost-work-mobile-fix {
+    font-size: clamp(4.5rem, 18vw, 6rem) !important;
+    transform: translate(23px, 10px) !important;
+  }
+  .ghost-traj-mobile-fix {
+    font-size: clamp(3.5rem, 14vw, 6rem) !important;
+    right: 23px !important;
+  }
+}
+
