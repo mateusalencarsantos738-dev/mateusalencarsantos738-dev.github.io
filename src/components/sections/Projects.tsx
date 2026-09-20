@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
-import { ArrowUpRight } from "lucide-react"
+import { Lock } from "lucide-react"
 
 export function Projects() {
   const containerRef = useRef<HTMLElement>(null)
@@ -80,10 +80,10 @@ export function Projects() {
                 Projeto acadêmico focado em análise avançada utilizando processamento de imagens e tarefas assíncronas. Uma solução backend robusta projetada para escalabilidade e performance.
               </p>
               
-              <div className="flex items-center gap-3 font-medium opacity-40 cursor-default" aria-label="Case study em breve">
-                <span>View Case Study</span>
+              <div className="flex items-center gap-3 font-medium opacity-40 cursor-default" aria-label="Projeto privado">
+                <span>Projeto privado</span>
                 <div className="p-2 rounded-full" style={{ border: '1px solid var(--color-border)' }}>
-                  <ArrowUpRight size={16} />
+                  <Lock size={16} />
                 </div>
               </div>
             </div>
@@ -105,10 +105,10 @@ export function Projects() {
                 Aplicação desktop desenvolvida para registro estruturado de problemas urbanos. Arquitetura MVC com integração de banco de dados nativa via DAO.
               </p>
               
-              <div className="flex items-center gap-3 font-medium opacity-40 cursor-default" aria-label="Case study em breve">
-                <span>View Case Study</span>
+              <div className="flex items-center gap-3 font-medium opacity-40 cursor-default" aria-label="Projeto privado">
+                <span>Projeto privado</span>
                 <div className="p-2 rounded-full" style={{ border: '1px solid var(--color-border)' }}>
-                  <ArrowUpRight size={16} />
+                  <Lock size={16} />
                 </div>
               </div>
             </div>
