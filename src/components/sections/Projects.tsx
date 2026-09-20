@@ -60,7 +60,7 @@ export function Projects() {
             <div className="md:col-span-7 order-2 md:order-1">
               <div className="card-shell rounded-[2rem] p-2 border overflow-hidden">
                 <div className="card-core w-full aspect-[4/3] rounded-[calc(2rem-0.5rem)] relative overflow-hidden group-hover:scale-[1.02] transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] flex items-center justify-center">
-                   <span className="font-display font-medium uppercase tracking-widest text-sm" style={{ color: 'var(--color-muted-foreground)' }}>Image Placeholder</span>
+                   <img src="/Tribunal.png" alt="TRI.bunal" className="w-full h-full object-cover" />
                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
               </div>
@@ -116,7 +116,7 @@ export function Projects() {
             <div className="md:col-span-7">
               <div className="card-shell rounded-[2rem] p-2 border overflow-hidden">
                 <div className="card-core w-full aspect-[4/3] rounded-[calc(2rem-0.5rem)] relative overflow-hidden group-hover:scale-[1.02] transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] flex items-center justify-center">
-                   <span className="font-display font-medium uppercase tracking-widest text-sm" style={{ color: 'var(--color-muted-foreground)' }}>Image Placeholder</span>
+                   <img src="/x9.jpeg" alt="X9 Cidadão" className="w-full h-full object-cover" />
                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
               </div>
