@@ -1,3 +1,5 @@
+import { EMAIL } from "../../lib/utils"
+
 export function Footer() {
   return (
     <footer className="py-12 px-4 md:px-8 max-w-7xl mx-auto w-full border-t border-border mt-32 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
@@ -7,6 +9,7 @@ export function Footer() {
       <div className="flex items-center gap-6">
         <a href="https://github.com/mateusalencarsantos738-dev" target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors duration-300">GitHub</a>
         <a href="https://www.linkedin.com/in/mateus-alencar-santos/" target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors duration-300">LinkedIn</a>
+        <a href={`mailto:${EMAIL}`} className="hover:text-foreground transition-colors duration-300">E-mail</a>
       </div>
     </footer>
   )
